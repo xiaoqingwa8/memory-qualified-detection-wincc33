@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="xyz.starchen.wincc.controller.ToolsController"
+            prefHeight="685" prefWidth="1280">
+
+    <VBox layoutX="80.0" layoutY="42.0" prefHeight="600.0" prefWidth="300.0" style="-fx-padding: 20px; -fx-spacing: 20px;">
+        <Label alignment="CENTER" prefHeight="60.0" prefWidth="300.0" text="通信设置">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Separator prefWidth="200.0" />
+        <VBox>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="260.0" text="串口设置">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                <buttons>
+                    <ChoiceBox prefWidth="150.0" />
+                    <Button maxWidth="40.0" mnemonicParsing="false" text="刷新">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Button>
+                </buttons>
+            </ButtonBar>
+        </VBox>
+        <Separator prefWidth="200.0" />
+        <VBox>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="260.0" text="上位机波特率设置">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                <buttons>
+                    <TextField />
+                    <Button maxWidth="40.0" mnemonicParsing="false" text="确定">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Button>
+                </buttons>
+            </ButtonBar>
+        </VBox>
+        <Separator prefWidth="200.0" />
+        <VBox>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="260.0" text="下位机波特率设置">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                <buttons>
+                    <TextField />
+                    <Button maxWidth="40.0" mnemonicParsing="false" text="确定">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Button>
+                </buttons>
+            </ButtonBar>
+        </VBox>
+        <Separator prefWidth="200.0" />
+    </VBox>
+    <VBox alignment="TOP_CENTER" layoutX="490.0" layoutY="42.0" prefHeight="600.0" prefWidth="300.0" style="-fx-padding: 20px; -fx-spacing: 20px;">
+        <Label alignment="CENTER" prefHeight="60.0" prefWidth="300.0" text="数据导出">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Separator prefWidth="200.0" />
+        <VBox alignment="TOP_CENTER" style="-fx-spacing: 10px;">
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="260.0" text="导出所有数据">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Button fx:id="outputAllButton" mnemonicParsing="false" text="导出 Excel">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Button>
+        </VBox>
+        <Separator prefWidth="200.0" />
+        <VBox alignment="TOP_CENTER" style="-fx-spacing: 10px;">
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="260.0" text="按日期导出">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <DatePicker />
+            <Button mnemonicParsing="false" text="导出 Excel">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Button>
+        </VBox>
+        <Separator prefWidth="200.0" />
+        <VBox alignment="TOP_CENTER" style="-fx-spacing: 10px;">
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="260.0" text="按类型导出">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <HBox alignment="CENTER" style="-fx-spacing: 10px;">
+                <RadioButton mnemonicParsing="false" text="合格品" />
+                <RadioButton mnemonicParsing="false" text="不合格品" />
+            </HBox>
+            <Button mnemonicParsing="false" text="导出 Excel">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Button>
+        </VBox>
+        <Separator prefWidth="200.0" />
+    </VBox>
+    <VBox alignment="TOP_CENTER" layoutX="878.0" layoutY="42.0" prefHeight="600.0" prefWidth="300.0" style="-fx-padding: 20px; -fx-spacing: 20px;">
+        <Label alignment="CENTER" prefHeight="60.0" prefWidth="300.0" text="关于">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Separator prefWidth="200.0" />
+        <VBox>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="260.0" text="版本" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="260.0" text="1.0.0 Beta">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </VBox>
+        <Separator prefWidth="200.0" />
+        <VBox>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="260.0" text="作者" />
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="260.0" text="StarChen">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </VBox>
+        <Separator prefWidth="200.0" />
+    </VBox>
+</AnchorPane>

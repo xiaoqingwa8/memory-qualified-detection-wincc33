@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="xyz.starchen.wincc.controller.DataController"
+            prefHeight="685" prefWidth="1280">
+
+    <AnchorPane layoutX="128.0" layoutY="86.0" prefHeight="256.0" prefWidth="1024.0" style="-fx-background-color: yellow;">
+        <Label layoutX="116.0" layoutY="61.0" text="合格数量">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Label layoutX="748.0" layoutY="61.0" text="不合格数量">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Label layoutX="458.0" layoutY="61.0" text="合格率">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <Label fx:id="qualifiedQuantity" alignment="CENTER" layoutX="88.0" layoutY="153.0" prefHeight="62.0" prefWidth="200.0" text="0">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+        <Label fx:id="qualificationRate" alignment="CENTER" layoutX="412.0" layoutY="153.0" prefHeight="62.0" prefWidth="200.0" text="100%">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+        <Label fx:id="unqualifiedQuantity" alignment="CENTER" layoutX="738.0" layoutY="153.0" prefHeight="62.0" prefWidth="200.0" text="0">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+    </AnchorPane>
+    <AnchorPane layoutX="70.0" layoutY="421.0" prefHeight="200.0" prefWidth="329.0" style="-fx-background-color: green;">
+        <Label layoutX="105.0" layoutY="50.0" text="总检测数量">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="total" alignment="CENTER" layoutX="65.0" layoutY="108.0" prefHeight="62.0" prefWidth="200.0" text="0">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+    </AnchorPane>
+    <Label layoutX="544.0" layoutY="14.0" text="今日数据">
+        <font>
+            <Font size="48.0" />
+        </font>
+    </Label>
+    <AnchorPane layoutX="475.0" layoutY="421.0" prefHeight="200.0" prefWidth="329.0" style="-fx-background-color: green;">
+        <Label layoutX="105.0" layoutY="49.0" text="下位机状态">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="linkState" alignment="CENTER" layoutX="65.0" layoutY="108.0" prefHeight="62.0" prefWidth="200.0" text="未连接">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+    </AnchorPane>
+    <AnchorPane layoutX="878.0" layoutY="421.0" prefHeight="200.0" prefWidth="329.0" style="-fx-background-color: green;">
+        <Label layoutX="117.0" layoutY="46.0" text="运行时间">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="runTime" alignment="CENTER" layoutX="65.0" layoutY="108.0" prefHeight="62.0" prefWidth="200.0" text="0h0m0s">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+    </AnchorPane>
+</AnchorPane>

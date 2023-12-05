@@ -1,0 +1,47 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.starchen.wincc.mapper.MemoryMapper">
+    
+    <select id="selectMemoryAll" resultType="memoryData">
+        select * from memory
+    </select>
+
+    <select id="selectMemoryById" resultType="memoryData">
+        select * from memory
+        where id=#{id}
+    </select>
+    
+    <select id="selectMemoryByQualified" resultType="memoryData">
+        select * from memory
+        where qualified=#{qualified}
+    </select>
+
+    <select id="selectMemoryByCheckTime" resultType="memoryData">
+        select * from memory
+        where check_time between #{startTime} and #{endTime}
+    </select>
+
+    <insert id="insertMemory" parameterType="memoryData">
+        insert into memory (difference, qualified, number, round, check_time)
+        values (#{difference}, #{qualified}, #{number}, #{round}, #{checkTime})
+    </insert>
+
+    <insert id="insertMemoryAll" parameterType="memoryData">
+        insert into memory (difference, qualified, number, round, check_time)
+        <foreach collection="array" separator="," item="i">
+            (#{i.difference}, #{i.qualified}, #{i.number}, #{i.round}, #{i.checkTime})
+        </foreach>
+    </insert>
+
+    <update id="updateMemory" parameterType="memoryData">
+        update memory
+        set difference = #{difference}, qualified = #{qualified}, `number` = #{number}, round = #{round}, check_time = #{checkTime}
+        where id=#{id}
+    </update>
+
+    <delete id="deleteMemoryById">
+        delete from memory
+        where id=#{id}
+    </delete>
+</mapper>
