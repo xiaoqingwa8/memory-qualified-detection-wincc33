@@ -3,21 +3,26 @@ package xyz.starchen.wincc.util
 import com.fazecast.jSerialComm.SerialPort
 import com.fazecast.jSerialComm.SerialPortDataListener
 import com.fazecast.jSerialComm.SerialPortEvent
+import java.util.concurrent.TimeUnit
+
 
 object SerialUtil {
     private var serialPort: SerialPort? = null
 
-    fun findSerial(): Array<SerialPort> {
+    fun findSerial(): Array<String> {
         val serialPorts = SerialPort.getCommPorts()//查找所有串口
+
+        val list = ArrayList<String>()
         for (port in serialPorts) {
-            println("Port:" + port.systemPortName)//打印串口名称，如COM4
-            println("PortDesc:" + port.portDescription)//打印串口类型，如USB Serial
-            println("PortDesc:" + port.descriptivePortName)//打印串口的完整类型，如USB-SERIAL CH340(COM4)
+            list.add(port.systemPortName)
         }
-        return serialPorts
+
+        return list.toTypedArray()
     }
 
-    fun openSerial(serialPort: SerialPort): Boolean {
+    fun openSerial(serialPortName: String): Boolean {
+        val serialPort = SerialPort.getCommPort(serialPortName)
+
         // 设置波特率为112500
         serialPort.baudRate = 112500
         // 设置两位停止位
@@ -27,10 +32,23 @@ object SerialUtil {
 
         if (serialPort.openPort()) {
             this.serialPort = serialPort
+
+            // 添加数据接收监听器
+            addListener()
+
             return true
         }
 
         return false
+    }
+
+    fun closeSerial() {
+        if (serialPort == null) {
+            return
+        }
+
+        this.serialPort!!.removeDataListener()
+        this.serialPort!!.closePort()
     }
 
     fun sendData(data: ByteArray): Boolean {
@@ -45,34 +63,30 @@ object SerialUtil {
         return false
     }
 
-    fun receiveData(): ByteArray {
-        if (this.serialPort == null) {
-            return byteArrayOf()
-        }
+    private fun parseData(receivedData: ByteArray) {
 
-        val readData: StringBuilder = StringBuilder()
-        while (this.serialPort!!.bytesAvailable() > 0) {
-            val newData = ByteArray(this.serialPort!!.bytesAvailable())
-            this.serialPort!!.readBytes(newData, newData.size)
-            readData.append(String(newData))
-            Thread.sleep(100)
-        }
-
-        return readData.toString().toByteArray()
     }
 
-    fun addListener() {
-        if (this.serialPort == null) {
-            return
-        }
-
+    private fun addListener() {
         this.serialPort!!.addDataListener(object :SerialPortDataListener {
             override fun getListeningEvents(): Int {
                 return SerialPort.LISTENING_EVENT_DATA_AVAILABLE
             }
 
-            override fun serialEvent(event: SerialPortEvent?) {
-                TODO("这里要触发数据显示与写入")
+            override fun serialEvent(event: SerialPortEvent) {
+                if (event.eventType != SerialPort.LISTENING_EVENT_DATA_AVAILABLE) {
+                    return
+                }
+
+                var data = ""
+                while (serialPort!!.bytesAvailable() != 0) {
+                    val newData = ByteArray(serialPort!!.bytesAvailable())
+                    serialPort!!.readBytes(newData, newData.size)
+                    data += String(newData)
+                    TimeUnit.MILLISECONDS.sleep(20)
+                }
+
+                println(data)
             }
         })
     }

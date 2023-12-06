@@ -23,7 +23,7 @@
             </Label>
             <ButtonBar prefHeight="40.0" prefWidth="200.0">
                 <buttons>
-                    <ChoiceBox prefWidth="150.0" />
+                    <ChoiceBox fx:id="serialChoice" prefWidth="150.0" />
                     <Button maxWidth="40.0" mnemonicParsing="false" text="刷新">
                         <font>
                             <Font size="14.0" />

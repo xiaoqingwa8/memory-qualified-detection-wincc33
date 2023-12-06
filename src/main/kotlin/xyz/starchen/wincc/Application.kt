@@ -5,6 +5,7 @@ import javafx.scene.Parent
 import javafx.scene.Scene
 import javafx.stage.Stage
 import xyz.starchen.wincc.util.ResourceUtil
+import xyz.starchen.wincc.util.SerialUtil
 
 class MyApplication: Application() {
     override fun start(primaryStage: Stage) {
@@ -12,6 +13,9 @@ class MyApplication: Application() {
         primaryStage.title = "内存弯曲度检测系统上位机"
         primaryStage.setScene(Scene(root, 1280.0, 720.0))
         primaryStage.isResizable = false
+        primaryStage.setOnCloseRequest {
+            SerialUtil.closeSerial()
+        }
         primaryStage.show()
     }
 }
