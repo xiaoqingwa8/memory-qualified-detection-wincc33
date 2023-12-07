@@ -119,10 +119,7 @@ object SerialUtil {
                 SettingUtil.runState = RunState.RUN
             }
             0x01.toUByte() -> {
-                SettingUtil.runState = RunState.STOP
-            }
-            0x02.toUByte() -> {
-                SettingUtil.runState = RunState.BUSY
+                SettingUtil.runState = RunState.FREE_TIME
             }
             else -> {
                 SettingUtil.runState = RunState.ERROR

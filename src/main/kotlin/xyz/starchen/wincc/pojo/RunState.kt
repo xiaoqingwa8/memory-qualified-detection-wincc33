@@ -2,8 +2,7 @@ package xyz.starchen.wincc.pojo
 
 enum class RunState {
     RUN,
-    STOP,
-    BUSY,
+    FREE_TIME,
     ERROR,
     NOT_LINKED
 }
