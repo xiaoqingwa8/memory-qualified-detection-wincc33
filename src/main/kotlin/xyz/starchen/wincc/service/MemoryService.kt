@@ -2,6 +2,7 @@ package xyz.starchen.wincc.service
 
 import org.apache.ibatis.annotations.Param
 import xyz.starchen.wincc.pojo.MemoryData
+import java.util.*
 
 interface MemoryService {
     fun selectMemoryAll(): Array<MemoryData>
@@ -21,4 +22,5 @@ interface MemoryService {
     fun updateMemory(memoryData: MemoryData): Int
 
     fun deleteMemoryById(id: Int): Int
+    fun selectMemoryBySpecificCheckTime(checkTime: Date):Array<MemoryData>
 }

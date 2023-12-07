@@ -3,9 +3,10 @@ package xyz.starchen.wincc.mapper.impl
 import xyz.starchen.wincc.mapper.MemoryMapper
 import xyz.starchen.wincc.pojo.MemoryData
 import xyz.starchen.wincc.util.MyBatisUtil
+import java.util.*
 
 
-class MemoryMapperImpl: MemoryMapper {
+class MemoryMapperImpl : MemoryMapper {
     override fun selectMemoryAll(): Array<MemoryData> {
         MyBatisUtil.getSqlSession().use { session ->
             val mapper: MemoryMapper = session.getMapper(MemoryMapper::class.java)
@@ -33,6 +34,8 @@ class MemoryMapperImpl: MemoryMapper {
             return mapper.selectMemoryByCheckTime(startTime, endTime)
         }
     }
+
+
 
     override fun selectLastData(): MemoryData {
         MyBatisUtil.getSqlSession().use { session ->
@@ -66,6 +69,13 @@ class MemoryMapperImpl: MemoryMapper {
         MyBatisUtil.getSqlSession().use { session ->
             val mapper: MemoryMapper = session.getMapper(MemoryMapper::class.java)
             return mapper.deleteMemoryById(id)
+        }
+    }
+
+    override fun selectMemoryBySpecificCheckTime(checkTime: Date): Array<MemoryData> {
+        MyBatisUtil.getSqlSession().use { session ->
+            val mapper: MemoryMapper = session.getMapper(MemoryMapper::class.java)
+            return mapper.selectMemoryBySpecificCheckTime(checkTime)
         }
     }
 }
