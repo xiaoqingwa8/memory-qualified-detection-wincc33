@@ -22,6 +22,10 @@
         where check_time between #{startTime} and #{endTime}
     </select>
 
+    <select id="selectLastData" resultType="memoryData">
+        select * from memory order by id desc limit 1;
+    </select>
+
     <insert id="insertMemory" parameterType="memoryData">
         insert into memory (difference, qualified, number, round, check_time)
         values (#{difference}, #{qualified}, #{number}, #{round}, #{checkTime})

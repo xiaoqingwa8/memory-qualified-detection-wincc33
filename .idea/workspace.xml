@@ -7,12 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc2062eb-fe3d-4545-8621-3bf2f8d1d3f2" name="更改" comment="第一版,基础功能已完成,数据库系统已完成">
+    <list default="true" id="fc2062eb-fe3d-4545-8621-3bf2f8d1d3f2" name="更改" comment="初步完善了与下位机的串口通信">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/util/DateUtil.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/Application.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/controller/ToolsController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/controller/ToolsController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/mapper/MemoryMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/mapper/MemoryMapper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/mapper/impl/MemoryMapperImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/mapper/impl/MemoryMapperImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/mapper/xml/MemoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/mapper/xml/MemoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/pojo/MemoryData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/pojo/MemoryData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/pojo/RunState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/pojo/RunState.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/service/MemoryService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/service/MemoryService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/service/impl/MemoryServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/service/impl/MemoryServiceImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/util/SerialUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/util/SerialUtil.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/tools_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/tools_view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/util/SettingUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/util/SettingUtil.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +56,9 @@
         <option value="FxmlFile" />
         <option value="module-info" />
         <option value="Class" />
-        <option value="Kotlin Class" />
         <option value="Record" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -68,32 +75,34 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/34253/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.9/7cf2726fdcfbc8610f9a71fb3ed639871f315340/slf4j-api-2.0.9.jar&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.24827586&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/34253/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.9/7cf2726fdcfbc8610f9a71fb3ed639871f315340/slf4j-api-2.0.9.jar",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDK",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.24827586",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="J:\memory-qualified-detection-wincc\src\main\resources" />
@@ -105,29 +114,7 @@
       <recent name="xyz.starchen.wincc.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.ApplicationKt">
-    <configuration name="memory-qualified-detection-wincc [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="ApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="xyz.starchen.wincc.ApplicationKt" />
       <module name="memory-qualified-detection-wincc.main" />
@@ -138,9 +125,15 @@
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.ApplicationKt" />
-        <item itemvalue="Gradle.memory-qualified-detection-wincc [clean]" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-graalvm-jdk-21.0.1-3183f394aec4-d6fc6071" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -172,7 +165,9 @@
       <workItem from="1701764363203" duration="4712000" />
       <workItem from="1701775766682" duration="5280000" />
       <workItem from="1701823668715" duration="36000" />
-      <workItem from="1701847252761" duration="5052000" />
+      <workItem from="1701847252761" duration="16266000" />
+      <workItem from="1701910929807" duration="466000" />
+      <workItem from="1701911442718" duration="884000" />
     </task>
     <task id="LOCAL-00001" summary="第一版,基础功能已完成,数据库系统已完成">
       <option name="closed" value="true" />
@@ -182,14 +177,34 @@
       <option name="project" value="LOCAL" />
       <updated>1701779286756</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="初步完善了与下位机的串口通信">
+      <option name="closed" value="true" />
+      <created>1701860602047</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701860602047</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一版,基础功能已完成,数据库系统已完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一版,基础功能已完成,数据库系统已完成" />
+    <MESSAGE value="初步完善了与下位机的串口通信" />
+    <option name="LAST_COMMIT_MESSAGE" value="初步完善了与下位机的串口通信" />
   </component>
 </project>

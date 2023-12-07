@@ -27,10 +27,17 @@ class MemoryMapperImpl: MemoryMapper {
         }
     }
 
-    override fun selectMemoryByCheckTime(startTime: Int, endTime: Int): Array<MemoryData> {
+    override fun selectMemoryByCheckTime(startTime: Long, endTime: Long): Array<MemoryData> {
         MyBatisUtil.getSqlSession().use { session ->
             val mapper: MemoryMapper = session.getMapper(MemoryMapper::class.java)
             return mapper.selectMemoryByCheckTime(startTime, endTime)
+        }
+    }
+
+    override fun selectLastData(): MemoryData {
+        MyBatisUtil.getSqlSession().use { session ->
+            val mapper: MemoryMapper = session.getMapper(MemoryMapper::class.java)
+            return mapper.selectLastData()
         }
     }
 

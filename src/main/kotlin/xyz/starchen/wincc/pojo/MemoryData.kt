@@ -2,11 +2,11 @@ package xyz.starchen.wincc.pojo
 
 data class MemoryData(
     val id: Int?,
-    val difference: Double,
+    val difference: Int,
     val qualified: Boolean,
     val number: Int,
     val round: Int,
-    val checkTime: Int
+    val checkTime: Long
 ) {
     override fun toString(): String {
         return "MemoryData(id=$id, difference=$difference, qualified=$qualified, number=$number, round=$round, checkTime=$checkTime)"

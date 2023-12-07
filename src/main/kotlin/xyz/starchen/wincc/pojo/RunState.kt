@@ -3,6 +3,7 @@ package xyz.starchen.wincc.pojo
 enum class RunState {
     RUN,
     STOP,
+    BUSY,
     ERROR,
-    BUSY
+    NOT_LINKED
 }

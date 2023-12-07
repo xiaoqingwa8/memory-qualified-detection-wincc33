@@ -10,7 +10,9 @@ interface MemoryMapper {
 
     fun selectMemoryByQualified(qualified: Boolean): Array<MemoryData>
 
-    fun selectMemoryByCheckTime(@Param("startTime") startTime: Int, @Param("endTime") endTime: Int): Array<MemoryData>
+    fun selectMemoryByCheckTime(@Param("startTime") startTime: Long, @Param("endTime") endTime: Long): Array<MemoryData>
+
+    fun selectLastData(): MemoryData
 
     fun insertMemory(memoryData: MemoryData): Int
 
