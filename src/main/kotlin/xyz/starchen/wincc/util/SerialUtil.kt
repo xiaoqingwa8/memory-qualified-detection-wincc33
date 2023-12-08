@@ -8,10 +8,10 @@ import xyz.starchen.wincc.pojo.RunState
 import xyz.starchen.wincc.service.impl.MemoryServiceImpl
 import java.util.*
 import java.util.concurrent.TimeUnit
-import kotlin.collections.ArrayList
 
 
 object SerialUtil {
+    private val listeners = ArrayList<SerialReceiveDataListener>()
     private var serialPort: SerialPort? = null
 
     /**
@@ -45,7 +45,7 @@ object SerialUtil {
             this.serialPort = serialPort
 
             // 添加数据接收监听器
-            addListener()
+            addReceiveListener()
 
             return true
         }
@@ -79,6 +79,10 @@ object SerialUtil {
         }
 
         return false
+    }
+
+    fun addSerialReceiveDataListener(listener: SerialReceiveDataListener) {
+        this.listeners.add(listener)
     }
 
     private fun intToBytes(value: Int): ByteArray {
@@ -163,7 +167,7 @@ object SerialUtil {
      * 监听器, 监听来自下位机的数据, 并将其保存
      */
     @OptIn(ExperimentalUnsignedTypes::class)
-    private fun addListener() {
+    private fun addReceiveListener() {
         this.serialPort!!.addDataListener(object :SerialPortDataListener {
             override fun getListeningEvents(): Int {
                 return SerialPort.LISTENING_EVENT_DATA_AVAILABLE
@@ -183,7 +187,11 @@ object SerialUtil {
                     TimeUnit.MILLISECONDS.sleep(20)
                 }
 
-                parseData(data.toUByteArray())
+//                parseData(data.toUByteArray())
+//                for (listener in listeners) {
+//                    listener.notice()
+//                }
+                println(data)
             }
         })
     }

@@ -11,76 +11,76 @@
     <HBox layoutX="304.0" layoutY="121.0" style="-fx-spacing: 10px;">
         <VBox>
          <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="1号内存" />
-            <Region fx:id="showRegion1" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #808080;" />
-            <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="曲率" />
+            <Region fx:id="showRegion1" prefHeight="30.0" prefWidth="100.0" />
+            <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="差值(μm)" />
             <Label fx:id="difference1" alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="0" />
         </VBox>
        <VBox>
           <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="2号内存" />
-          <Region fx:id="showRegion2" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #808080;" />
-          <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="曲率" />
+          <Region fx:id="showRegion2" prefHeight="30.0" prefWidth="100.0" />
+          <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="差值(μm)" />
           <Label fx:id="difference2" alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="0" />
        </VBox>
        <VBox>
           <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="3号内存" />
-          <Region fx:id="showRegion3" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #808080;" />
-          <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="曲率" />
+          <Region fx:id="showRegion3" prefHeight="30.0" prefWidth="100.0" />
+          <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="差值(μm)" />
           <Label fx:id="difference3" alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="0" />
        </VBox>
        <VBox>
           <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="4号内存" />
-          <Region fx:id="showRegion4" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #808080;" />
-          <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="曲率" />
+          <Region fx:id="showRegion4" prefHeight="30.0" prefWidth="100.0" />
+          <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="差值(μm)" />
           <Label fx:id="difference4" alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="0" />
        </VBox>
        <VBox>
           <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="5号内存" />
-          <Region fx:id="showRegion5" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #808080;" />
-          <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="曲率" />
+          <Region fx:id="showRegion5" prefHeight="30.0" prefWidth="100.0" />
+          <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="差值(μm)" />
           <Label fx:id="difference5" alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="0" />
        </VBox>
        <VBox>
           <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="6号内存" />
-          <Region fx:id="showRegion6" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #808080;" />
-          <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="曲率" />
+          <Region fx:id="showRegion6" prefHeight="30.0" prefWidth="100.0" />
+          <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="差值(μm)" />
           <Label fx:id="difference6" alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="0" />
        </VBox>
     </HBox>
    <HBox layoutX="304.0" layoutY="400.0" style="-fx-spacing: 10px;">
       <VBox>
          <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="7号内存" />
-         <Region fx:id="showRegion7" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #808080;" />
-         <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="曲率" />
+         <Region fx:id="showRegion7" prefHeight="30.0" prefWidth="100.0" />
+         <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="差值(μm)" />
          <Label fx:id="difference7" alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="0" />
       </VBox>
       <VBox>
          <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="8号内存" />
-         <Region fx:id="showRegion8" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #808080;" />
-         <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="曲率" />
+         <Region fx:id="showRegion8" prefHeight="30.0" prefWidth="100.0" />
+         <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="差值(μm)" />
          <Label fx:id="difference8" alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="0" />
       </VBox>
       <VBox>
          <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="9号内存" />
-         <Region fx:id="showRegion9" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #808080;" />
-         <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="曲率" />
+         <Region fx:id="showRegion9" prefHeight="30.0" prefWidth="100.0" />
+         <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="差值(μm)" />
          <Label fx:id="difference9" alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="0" />
       </VBox>
       <VBox>
          <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="10号内存" />
-         <Region fx:id="showRegion10" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #808080;" />
-         <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="曲率" />
+         <Region fx:id="showRegion10" prefHeight="30.0" prefWidth="100.0" />
+         <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="差值(μm)" />
          <Label fx:id="difference10" alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="0" />
       </VBox>
       <VBox>
          <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="11号内存" />
-         <Region fx:id="showRegion11" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #808080;" />
-         <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="曲率" />
+         <Region fx:id="showRegion11" prefHeight="30.0" prefWidth="100.0" />
+         <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="差值(μm)" />
          <Label fx:id="difference11" alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="0" />
       </VBox>
       <VBox>
          <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="12号内存" />
-         <Region fx:id="showRegion12" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #808080;" />
-         <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="曲率" />
+         <Region fx:id="showRegion12" prefHeight="30.0" prefWidth="100.0" />
+         <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="100.0" text="差值(μm)" />
          <Label fx:id="difference12" alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="0" />
       </VBox>
    </HBox>
