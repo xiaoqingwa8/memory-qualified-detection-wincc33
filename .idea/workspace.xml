@@ -7,12 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc2062eb-fe3d-4545-8621-3bf2f8d1d3f2" name="更改" comment="为 MonitorController 加入了对应的变量">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/util/SerialReceiveDataListener.kt" afterDir="false" />
+    <list default="true" id="fc2062eb-fe3d-4545-8621-3bf2f8d1d3f2" name="更改" comment="完善了对数据库数据显示的部分">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/controller/MonitorController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/controller/MonitorController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/util/SerialUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/xyz/starchen/wincc/util/SerialUtil.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/monitor_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/monitor_view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/tools_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/tools_view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +168,7 @@
       <workItem from="1701914156118" duration="3793000" />
       <workItem from="1701939244006" duration="5389000" />
       <workItem from="1701997028308" duration="772000" />
-      <workItem from="1701998216562" duration="1815000" />
+      <workItem from="1701998216562" duration="3694000" />
     </task>
     <task id="LOCAL-00001" summary="第一版,基础功能已完成,数据库系统已完成">
       <option name="closed" value="true" />
@@ -202,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701914768105</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完善了对数据库数据显示的部分">
+      <option name="closed" value="true" />
+      <created>1702001124071</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702001124071</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +232,7 @@
     <MESSAGE value="初步完善了与下位机的串口通信" />
     <MESSAGE value="基本完成了对下位机数据的解析与存入数据库" />
     <MESSAGE value="为 MonitorController 加入了对应的变量" />
-    <option name="LAST_COMMIT_MESSAGE" value="为 MonitorController 加入了对应的变量" />
+    <MESSAGE value="完善了对数据库数据显示的部分" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善了对数据库数据显示的部分" />
   </component>
 </project>

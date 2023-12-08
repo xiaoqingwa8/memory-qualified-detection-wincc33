@@ -6,7 +6,6 @@ import javafx.scene.control.Label
 import javafx.scene.layout.Background
 import javafx.scene.layout.Region
 import javafx.scene.paint.Color
-import xyz.starchen.wincc.pojo.MemoryData
 import xyz.starchen.wincc.service.impl.MemoryServiceImpl
 import xyz.starchen.wincc.util.SerialReceiveDataListener
 import xyz.starchen.wincc.util.SerialUtil
