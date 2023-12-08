@@ -3,6 +3,7 @@ package xyz.starchen.wincc.service.impl
 import xyz.starchen.wincc.mapper.impl.MemoryMapperImpl
 import xyz.starchen.wincc.pojo.MemoryData
 import xyz.starchen.wincc.service.MemoryService
+import java.util.*
 
 class MemoryServiceImpl: MemoryService {
     private val mapper = MemoryMapperImpl()
@@ -41,5 +42,9 @@ class MemoryServiceImpl: MemoryService {
 
     override fun deleteMemoryById(id: Int): Int {
         return mapper.deleteMemoryById(id)
+    }
+
+    override fun selectMemoryBySpecificCheckTime(checkTime: Date): Array<MemoryData> {
+        return mapper.selectMemoryBySpecificCheckTime(checkTime)
     }
 }

@@ -48,4 +48,8 @@
         delete from memory
         where id=#{id}
     </delete>
+    <select id="selectMemoryBySpecificCheckTime">
+        select * from memory
+        where check_time = #{SpecificCheckTime}
+    </select>
 </mapper>

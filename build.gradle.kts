@@ -24,6 +24,12 @@ dependencies {
     // 日志
     implementation("org.slf4j:slf4j-api:2.0.9")
     testImplementation("org.slf4j:slf4j-simple:2.0.9")
+    //excel
+    implementation("com.alibaba:easyexcel:3.3.2")
+    //dateTimePicker
+    //implementation("org.webjars:datetimepicker:2.5.20-1")
+    //implementation ("org.controlsfx:controlsfx:11.1.0")
+
 }
 
 tasks.test {

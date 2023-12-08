@@ -3,10 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="xyz.starchen.wincc.controller.ToolsController"
-            prefHeight="685" prefWidth="1280">
+<AnchorPane prefHeight="685" prefWidth="1280" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.starchen.wincc.controller.ToolsController">
 
     <VBox layoutX="80.0" layoutY="42.0" prefHeight="600.0" prefWidth="300.0" style="-fx-padding: 20px; -fx-spacing: 20px;">
         <Label alignment="CENTER" prefHeight="60.0" prefWidth="300.0" text="通信设置">
@@ -83,7 +80,7 @@
                     <Font size="14.0" />
                 </font>
             </Label>
-            <Button fx:id="outputAllButton" mnemonicParsing="false" text="导出 Excel">
+            <Button  mnemonicParsing="false" onMouseClicked="#outputAllExcel" text="导出 Excel">
                 <font>
                     <Font size="14.0" />
                 </font>
@@ -96,8 +93,9 @@
                     <Font size="14.0" />
                 </font>
             </Label>
-            <DatePicker />
-            <Button mnemonicParsing="false" text="导出 Excel">
+
+            <DatePicker fx:id="datePicker" onAction="#exportByDate" />
+            <Button mnemonicParsing="false" onMouseClicked="#outputDateExcel" text="导出 Excel">
                 <font>
                     <Font size="14.0" />
                 </font>
@@ -111,10 +109,10 @@
                 </font>
             </Label>
             <HBox alignment="CENTER" style="-fx-spacing: 10px;">
-                <RadioButton mnemonicParsing="false" text="合格品" />
-                <RadioButton mnemonicParsing="false" text="不合格品" />
+                <RadioButton fx:id="radioButton1" mnemonicParsing="false" text="合格品"  />
+                <RadioButton fx:id="radioButton2" mnemonicParsing="false" text="不合格品"  />
             </HBox>
-            <Button mnemonicParsing="false" text="导出 Excel">
+            <Button onAction="#outputTypeExcel" mnemonicParsing="false" text="导出 Excel">
                 <font>
                     <Font size="14.0" />
                 </font>
