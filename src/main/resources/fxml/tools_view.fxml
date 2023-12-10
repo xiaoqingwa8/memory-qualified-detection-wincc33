@@ -105,14 +105,14 @@
             </Label>
          <VBox alignment="CENTER">
             <children>
-      
-                  <DatePicker fx:id="datePicker" onAction="#exportByDate" />
+
+                  <DatePicker fx:id="startDatePicker" onAction="#startExportDate" />
                <Label alignment="CENTER" prefHeight="30.0" text="至">
                   <font>
                      <Font size="14.0" />
                   </font>
                </Label>
-               <DatePicker fx:id="datePicker1" onAction="#exportByDate" />
+               <DatePicker fx:id="endDatePicker" onAction="#endExportDate" />
             </children>
          </VBox>
             <Button mnemonicParsing="false" onMouseClicked="#outputDateExcel" text="导出 Excel">
